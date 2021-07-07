@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    //destructing: tira valores de dentro de uma estrutura
+
+
+    let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamao'];
+
+    //let [ a, b, , c ] = frutas; //pulando indice
+
+    let [ a, b, c, d, e = 'Não definido'] = frutas;
+    //console.log(a, b, c, d, e);
+
+
+    let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamao'], ['josé', 'Maria']];
+
+
+    let [,[x, y]] = coisas;
+    let [[,k, l,],] = coisas;
+
+    console.log('nomes do array coisas: '+ x, y);
+    console.log('Frutas do array coisas: '+ k, l);
+    </script>
+</head>
+<body>  
+</body>
+</html>

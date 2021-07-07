@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+    class Sofa{
+        constructor(qtde_lugar, reclinavel, cor){
+            this.qtde_lugar = qtde_lugar;
+            this.reclinavel = reclinavel;
+            this.cor = cor;
+
+        }
+        reclinavel(atributo){
+            if (atributo === true) {
+                console.log('Sim');
+            }else{
+                console.log('Não');
+            }
+        }
+    }
+    let sofa = Array();
+
+
+    sofa.push(new Sofa(4, true, 'verde'));
+    console.log(sofa);
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

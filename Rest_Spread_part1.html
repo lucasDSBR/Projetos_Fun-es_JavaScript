@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    //String 
+    let tituloArtigo = 'Como utilizar o operador rest spread';
+
+    console.log(tituloArtigo);
+    console.log(...tituloArtigo);
+    console.log([...tituloArtigo]);
+
+
+
+    //arrays
+
+    let listaCursos1 = ['nodejs', 'mongoDB', 'es6', 'typeScript', 'Angular9']
+    let listaCursos2 = ['multiplataforma android/os','introdução ao guinu linux']
+    let listaCursosCompleto = ['Web comleto', 'android completo', ...listaCursos1, ...listaCursos2]
+
+    console.log(listaCursosCompleto);   
+
+
+
+    //objetos 
+
+    let nome = { nome: 'João', idade: 27}
+    let clone = { endereco: 'Rua abc', ...nome}
+
+
+    console.log(clone)
+    </script>
+</head>
+<body>  
+</body>
+</html>

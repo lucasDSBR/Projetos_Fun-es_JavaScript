@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    let Bicicleta1 ={
+        cor: 'branca',
+        marcha: 'unica',
+        aro: 12,
+        pedalar(){
+            console.log('Método pedalar executado.');
+        }
+    }
+    let Bicicleta2 ={
+        cor: 'Vermelha',
+        marcha: '18',
+        aro: 26,
+        pedalar(){
+            console.log('Método pedalar executado.');
+        }
+    }
+
+    console.log(Bicicleta1);
+    console.log(Bicicleta2);
+
+
+
+    //Utilizando as mesmas coisas em apenas uma função(Função Factory):
+
+    let BicicletaFactory = function (cor, marcha, aro){
+        return {
+            cor, marcha, aro, pedalar(){
+                console.log('Método pedalar executado.');
+            }
+        }
+    }
+
+
+    let Bicicleta3 = BicicletaFactory('vermelha', 12, 26);
+
+    let Bicicleta4 = BicicletaFactory('azul', 13, 24);
+    console.log(Bicicleta3);
+    console.log(Bicicleta4);
+    </script>
+</head>
+<body>  
+</body>
+</html>

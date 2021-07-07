@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+    class TV{
+        constructor(){
+            this._relacaoCanais = Array(2, 4, 5, 7, 10);
+            this._canalAtivo = 5;
+            this._volume = 5;
+        }
+
+        get canalAtivo(){
+            return this._canalAtivo;
+        }
+
+        set canalAtivo(canal){
+            let x = this._relacaoCanais.indexOf(canal);
+
+            if (x === -1) {
+                this._canalAtivo = canal;
+            }else {
+                console.log('O canal já existe');
+            }
+            
+            
+        }
+    }
+
+    let tv = new TV();
+
+    tv.canalAtivo = 10
+    console.log(tv.canalAtivo);
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

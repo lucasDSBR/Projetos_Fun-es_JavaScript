@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    let produto = { 
+        descricao: 'notebook', 
+        preco: 1800, 
+        detalhes: {
+            fabricante: 'abc',
+            modelo: 'xyz'
+        }
+    };
+
+
+    //tokem
+
+    //array: []
+    //objeto: {}
+
+    //let { descricao, preco } = produto;
+
+
+    //mudando nome de variavel:
+    //let { descricao:a, preco:b } = produto;
+
+    //let { descricao:a, preco:b, desconto } = produto;
+
+    //Dando valores default:
+    //let { descricao:a, preco:b, desconto = 5 } = produto;
+
+    let { detalhes: { fabricante:a, modelo:b } } = produto;
+
+    console.log(a, b);
+    </script>
+</head>
+<body>  
+</body>
+</html>
